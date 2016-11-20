@@ -1,0 +1,4 @@
+#!/bin/bash
+# Simple run script for the tink server.
+
+sudo node server.js

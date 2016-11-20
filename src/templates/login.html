@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login | Tink Knit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, mininum-scale=1, maximum-scale=1">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/login.css" rel="stylesheet">
+		<link href="/css/forms.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="main_container">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="alert alert-danger" style="display:none" id="error"></div>
+				<form class="centered">
+					<h2 style="text-align:center;">Login</h2>
+					<div class="form-group">
+						<input type="email" id="email" class="form-control" placeholder="Email Address" autofocus>
+					</div>
+					<div class="form-group">
+						<input type="password" id="password" class="form-control" placeholder="Password">
+					</div>
+					<br>
+					<br>
+					<div>
+						<button class="btn btn-lg btn-primary btn-block" id="login" style="left: 35%; position: relative;">Login</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/api.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/login.js"></script>
+	</body>
+</html>

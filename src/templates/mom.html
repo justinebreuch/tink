@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> | Tink Knit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, mininum-scale=1, maximum-scale=1">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/forms.css" rel="stylesheet">
+		<link href="/css/mom.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav>
+		        <ul>
+		            <li class="centered_parent"><a href="/dashboard"class="active centered">Dashboard</a></li>
+					<li class="centered_parent"><a href="/exchanges"class="centered">Feed</a></li>
+		            <li class="centered_parent"><a href="/exchange" class="centered" id="add_exchange">Add Exchange<span class="no_impact"><img src="../imgs/plus_sign.png" class="large_icon" id="in_nav"></span></a></li>
+		        </ul>
+        	</nav>
+		<div class="main_container">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="alert alert-danger" style="display:none" id="error"></div>
+				<div class="alert alert-success" style="display:none" id="msg"></div>
+
+					<!-- PRIMARY -->
+					<h2 id="name"></h2>
+					<div class="picture" id="picture"></div>
+					<div id="profile">
+						<div class="form-group">
+						<h3>Manager</h3>
+						<p id="manager"></p>
+					</div>
+				
+				</div>
+
+				<!-- CONTACT -->
+				<h3>Contact Information</h3>
+				
+				<div class="form-group">
+					<input type="email" class="form-control" id="email" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="phone" placeholder="Phone">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="organization" placeholder="Organization">
+				</div>
+				
+				<br>
+
+				<!-- SECONDARY -->
+				<h3>Secondary Contact</h3>
+				<div class="form-group">
+					<input type="text" class="form-control" id="secondary-name" placeholder="Name">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="secondary-phone" placeholder="Phone">
+				</div>
+				<br>
+
+				<!-- MISCELLANEOUS -->
+				<div class="form-group">
+					<h3>Product Types</h3>
+					<div class="checkbox"><label><input type="checkbox" id="hat">Hat</label></div>
+					<div class="checkbox"><label><input type="checkbox" id="scarf">Scarf</label></div>
+					<div class="checkbox"><label><input type="checkbox" id="cupcozy">Cup Cozy</label></div>
+					<div class="checkbox"><label><input type="checkbox" id="other">Other</label></div>
+				</div>
+				<div class="form-group">
+					<label>Other</label>
+					<div class="checkbox"><label><input type="checkbox" id="supplier">Individual Supplier Form</label></div>
+					<div class="checkbox"><label><input type="checkbox" id="beginner">Beginner Kit Deposit</label></div>
+				</div>
+				<br><br>
+
+				<!-- BUTTONS -->
+				<button class="btn btn-lg btn-primary btn-block inline_elements" id="save">Save</button>
+				<button class="btn btn-primary btn-block inline_elements" id="claim">Claim Mom</button>
+				<button class="btn btn-lg btn-danger btn-block inline_elements" id="delete">Delete Mom</button>
+				<br>
+				<br>
+			</div>
+		</div>
+
+		<script>_momId = {{ mom }};</script>
+
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/api.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/mom.js"></script>
+	</body>
+</html>

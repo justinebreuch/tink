@@ -1,0 +1,121 @@
+label {
+	font-size:1em;
+	font-weight:100;
+	text-transform: uppercase;
+	color:#595F70;
+	margin: calc(4vh) 0;
+	margin-right: calc(4vw);
+}
+
+.form_item {
+	display:inline-block;
+	margin: calc(1vh) 0;
+}
+
+.form_item:first-child {
+	margin-top:calc(1vh);
+}
+
+tr {
+    display: block;
+    margin: calc(2vw) 0;
+}
+
+button a {
+	font-weight: 300;
+}
+
+.submit_button {
+	display: block;
+	margin-bottom: calc(3vh);
+}
+
+h4 {
+    margin-top: calc(1vh);
+}
+
+textarea {
+    background-color: #525661;
+    border: none;
+    margin-top: calc(1vh);
+    min-height: calc(15vh);
+    color: #DDDDDD;
+    font-size: 15px;
+    font-family: 'Proxima Nova';
+    font-weight: 100;
+    padding-top: calc(2vh);
+ 	padding-left: calc(2vw);
+}
+
+select {
+	background: transparent;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 1;
+    border: 0;
+    color: #A7A8A8;
+    font-family: 'Proxima Nova';
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+input[type="file"] {
+	margin-bottom: calc(3vh);
+	background-color: transparent;
+    border:none;
+}
+
+input {
+    border: solid 2px #525661;
+	background-color: transparent;
+    margin-top: calc(1vh);
+    color: #DDDDDD;
+    font-size: 15px;
+    font-family: 'Proxima Nova';
+    font-weight: 100;
+    padding-top: calc(2vh);
+ 	padding-left: calc(2vw);
+}
+
+.values {
+    text-align: center;
+    border: none;
+    color: white;
+    width: calc(20vw);
+    font-size:2em;
+}
+
+.delete {
+    position: absolute;
+    border: none;
+    top: 0;
+    right: 0;
+}
+
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #525661 inset !important;
+    -webkit-text-fill-color: #525661;
+    font-weight:100;
+}
+
+/*Styles placeholder text*/
+::-webkit-input-placeholder {
+   color: #525661;
+   font-weight:100;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #525661; 
+   font-weight:100;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #525661; 
+   font-weight:100; 
+}
+
+:-ms-input-placeholder {  
+   color: #525661;  
+   font-weight:100;
+}

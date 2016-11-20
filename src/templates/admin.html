@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Admin | Tink Knit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, mininum-scale=1, maximum-scale=1">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/forms.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav>
+            <ul>
+                <li class="centered_parent"><a href="/admin"class="active centered">Dashboard</a></li>
+            </ul>
+        </nav>
+		<div class="main_container">
+			<h2>Admin Dashboard</h2>
+			<div class="modals">
+				<div class="panel panel-default">
+					<div class="panel panel-body modal">
+							<h3 class="inline_elements">Create New User</h3>
+							<button class="back"><a>Back</a></button>
+						<br>
+						<div class="form_item">
+							<input type="text" id="user-name" class="form-control" placeholder="Name">
+						</div>
+						<div class="form_item">
+							<input type="email" id="user-email" class="form-control" placeholder="Email">
+						</div>
+						<div class="form_item">
+							<input type="password" id="user-password" class="form-control" placeholder="Password">
+						</div>
+						<br>
+						<br>
+						<button class="btn btn-primary" id="user-create">Create New User</button>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<div class="alert alert-danger" style="display:none" id="error"></div>
+				<div class="alert alert-success" style="display:none" id="msg"></div>
+
+				<!-- USER MANAGEMENT -->
+				<h3>User Management</h3>
+				
+				<div class="list-group" id="users"></div>
+				<h3 class="inline_elements">Create New User</h3>
+					<img src="imgs/plus_sign.png" class="adjust_button open_modal" id="new_user"><a></a>
+				<br><br>
+
+				<!-- LOGOUT -->
+				<button class="btn btn-lg btn-danger btn-block inline_elements" id="logout">Logout</button>
+				<!-- SETTINGS -->
+				<button class="btn btn-lg btn-danger btn-block inline_elements" id="settings"><a href='/settings'>Settings</a></button>
+				<br>
+				<br>
+			</div>
+		</div>
+
+	
+		<script src="/js/jquery.min.js"></script>
+		<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+		<script src="/js/api.js"></script>
+		<script src="/js/admin.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>

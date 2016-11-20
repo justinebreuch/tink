@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exchanges | Tink Knit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, mininum-scale=1, maximum-scale=1">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/forms.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav>
+            <ul>
+                <li class="centered_parent"><a href="/dashboard"class="centered">Dashboard</a></li>
+				<li class="centered_parent active"><a href="/dashboard"class="active centered">Feed</a></li>
+                <li class="centered_parent"><a href="/exchange" class="centered" id="add_exchange">Add Exchange<span class="no_impact"><img src="../imgs/plus_sign.png" class="large_icon" id="in_nav"></span></a></li>
+            </ul>
+        </nav>
+		<div class="main_container">
+			<h2>Exchanges</h2>
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="alert alert-danger" style="display:none" id="error"></div>
+				<div class="alert alert-success" style="display:none" id="msg"></div>
+
+				<div id="exchanges"></div>
+				<br>
+			</div>
+		</div>
+
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/api.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/exchanges.js"></script>
+	</body>
+</html>

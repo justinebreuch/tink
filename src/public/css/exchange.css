@@ -1,0 +1,13 @@
+.inventory_item {
+    margin: calc(2vh) 0;
+    margin-right: calc(4vw);
+    white-space: nowrap;
+}
+
+#giving, #receiving {
+	text-align: left;
+}
+
+textarea {
+	width: calc(60vw);
+}

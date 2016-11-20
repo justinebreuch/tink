@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exchange | Tink Knit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, mininum-scale=1, maximum-scale=1">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/forms.css" rel="stylesheet">
+		<link href="/css/exchange.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<nav>
+            <ul>
+                <li class="centered_parent"><a href="/dashboard"class="centered">Dashboard</a></li>
+				<li class="centered_parent"><a href="/exchanges"class="centered">Feed</a></li>
+                <li class="centered_parent"><a href="/exchange" class="centered" id="add_exchange">Add Exchange<span class="no_impact"><img src="../imgs/plus_sign.png" class="large_icon" id="in_nav"></span></a></li>
+            </ul>
+        </nav>
+		<div class="main_container">
+
+			<!-- INVENTORY MODAL -->
+			<div class="modal fade" id="inventory-modal" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title inline_elements">Choose Item</h2>
+							<button class="back"><a>Back</a></button>
+						</div>
+						<div class="modal-body">
+							<div id="inventory"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<div class="alert alert-danger" style="display:none" id="error"></div>
+				<div class="alert alert-success" style="display:none" id="msg"></div>
+				<h2>Create Exchange</h2>
+				<!-- RECIPIENT -->
+				<div class="form_item">
+					<h3 class="inline_elements">Recipient</h3>
+				
+					<select id="recipient">
+					</select>
+				</div>
+				<br>
+
+				<!-- GIVING -->
+				<h3>Giving</h3>
+				
+				<div class="list-group" id="giving"></div>
+				<button class="btn btn-primary btn-block" id="giving-add" data-toggle="modal" data-target="#inventory-modal">Add Item</button>
+				<br>
+
+				<!-- RECEIVING -->
+				<h3>Receiving</h3>
+				
+				<div class="list-group" id="receiving"></div>
+				<button class="btn btn-primary btn-block" id="receiving-add" data-toggle="modal" data-target="#inventory-modal">Add Item</button>
+				<br>
+
+				<!-- NOTES -->
+								
+				<div class="form_item">
+
+					<h3>Notes</h3>
+					
+					<textarea class="form-control" rows="4" id="notes"></textarea>
+				</div>
+
+
+				<!-- BUTTONS -->
+				<button class="btn btn-primary btn-block btn-lg" id="save">Save</button>
+				<br>
+			</div>
+		</div>
+		<br>
+
+
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/api.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+		<script src="/js/exchange.js"></script>
+	</body>
+</html>

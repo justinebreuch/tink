@@ -1,0 +1,21 @@
+{
+  "name": "tink",
+  "version": "1.0.0",
+  "description": "tink | knit server",
+  "main": "server.js",
+  "author": "cs132 group 13",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "colors": "^1.1.2",
+    "connect-mongo": "^1.1.0",
+    "consolidate": "^0.14.0",
+    "cookie-parser": "^1.4.1",
+    "crypto": "0.0.3",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "hogan": "^1.0.2",
+    "mongoose": "^4.4.10",
+    "mongoose-auto-increment": "^5.0.1"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Admin | Tink Knit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, mininum-scale=1, maximum-scale=1">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/forms.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<nav>
+	        <ul>
+                <li class="centered_parent"><a href="/admin"class="active centered">Dashboard</a></li>
+				<li class="centered_parent"><a href="/exchanges"class="centered">Feed</a></li>
+                <li class="centered_parent"><a href="/exchange" class="centered" id="add_exchange">Add Exchange<span class="no_impact"><img src="../imgs/plus_sign.png" class="large_icon" id="in_nav"></span></a></li>
+	        </ul>
+        </nav>
+		<div class="main_container">
+	
+			<!-- ACCOUNT SETTINGS -->
+			<h3>Account Settings</h3>
+			
+			<div class="form_item">
+				<input type="text" id="account-name" class="form-control" placeholder="Name">
+			</div>
+			<div class="form_item">
+				<input type="text" id="account-phone" class="form-control" placeholder="Phone">
+			</div>
+			<div class="form_item">
+				<input type="password" id="account-password" class="form-control" placeholder="Password">
+			</div><br>
+			<button class="btn btn-primary inline_elements" id="account-update"><a>Update</a></button>
+
+			<!-- LOGOUT -->
+			<button class="btn btn-lg btn-danger btn-block inline_elements" id="logout">Logout</button>
+			<br>
+			</div>
+		</div>
+
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/api.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/admin.js"></script>
+	</body>
+</html>

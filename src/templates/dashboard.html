@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dashboard | Tink Knit</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/css/main.css" rel="stylesheet">
+		<link href="/css/forms.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav>
+            <ul>
+                <li class="centered_parent"><a href="/admin"class="active centered">Dashboard</a></li>
+				<li class="centered_parent"><a href="/exchanges"class="centered">Feed</a></li>
+                <li class="centered_parent"><a href="/exchange" class="centered" id="add_exchange">Add Exchange<span class="no_impact"><img src="../imgs/plus_sign.png" class="large_icon" id="in_nav"></span></a></li>
+            </ul>
+        </nav>
+		<div class="main_container">
+			<div class="modals">
+				<div class="alert alert-danger" style="display:none" id="error"></div>
+				<div class="alert alert-success" style="display:none" id="msg"></div>
+
+				<!-- MOM MANAGEMENT -->
+				<div class="panel panel-default collapse modal" id="mom-create-panel">
+					<div class="panel-body">
+						<h2 class="inline_elements">Create New Mom</h2>
+						<button class="back"><a>Back</a></button>
+
+						<h3>Personal Information</h3>
+						<br>
+						<div class="form_item">
+							<input type="text" id="mom-name" class="form-control" placeholder="Name">
+						</div>
+						<div class="form_item">
+							<input type="email" id="mom-email" class="form-control" placeholder="Email">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-phone" class="form-control" placeholder="Phone">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-address" class="form-control" placeholder="Address">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-zip" class="form-control" placeholder="Zipcode">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-birthday" class="form-control" placeholder="Birthday MM/DD/YY">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-nationality" class="form-control" placeholder="Nationality">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-ethnicity" class="form-control" placeholder="Ethnicity">
+						</div>
+						<br>
+						<h3>Secondary Contact</h3>
+						
+						<div class="form_item">
+							<input type="text" id="mom-secondary-name" class="form-control" placeholder="Name">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-secondary-phone" class="form-control" placeholder="Phone">
+						</div>
+						<br>
+						<h3>Miscellaneous</h3>
+						
+						<div class="form_item">
+							<input type="text" id="mom-organization" class="form-control" placeholder="Organization">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-aok" class="form-control" placeholder="Age of Kids">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-occupation" class="form-control" placeholder="Occupation">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-education" class="form-control" placeholder="Education">
+						</div>
+						<div class="form_item">
+							<input type="text" id="mom-income" class="form-control" placeholder="Monthly Income">
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="mom-car">
+							<p class="inline_elements">Car Owner</p>
+			
+						</div>
+						<div class="radio">
+							<input type="radio" name="mom-deposit" id="mom-deposit-direct" checked><p class="inline_elements">Direct Deposit</p>
+						</div>
+						<div class="radio">
+							<input type="radio" name="mom-deposit" id="mom-deposit-check"><p class="inline_elements">Paper Check</p>
+						</div>
+						<br>
+						<h3>Picture</h3>
+						<div class="form_item">
+							<input type="file" accepts="image/*" id="mom-picture">
+						</div>
+						
+						<button class="btn btn-primary" id="mom-create"><a>Create New Mom</a></button>
+						<br><br>
+					</div>
+				</div>
+
+				<!-- YARN MANAGEMENT -->
+				<div class="panel panel-default collapse modal" id="yarn-create-panel">
+					<div class="panel-body">
+						<h2 class="inline_elements">Create New Yarn Type</h2>
+						<button class="back"><a>Back</a></button>
+						<div class="form_item">
+							<input type="text" id="yarn-name" class="form-control" placeholder="Brand">
+						</div>
+						<br>
+						<h3>Color</h3>
+						<div class="form_item color_options" id="yarn_color_options">
+						</div>
+						<br>
+						<br>
+						<button id="yarn-create" class="btn btn-primary"><a>Create New Yarn Type</a></button>
+					</div>
+				</div>
+
+				<!-- HAT MANAGEMENT -->
+				<div class="panel panel-default collapse modal" id="hat-create-panel">
+					<div class="panel-body">
+						<h2 class="inline_elements">Create New Hat Type</h2>
+						<button class="back"><a>Back</a></button>
+						<h3>Base Color</h3>
+						<div class="form_item color_options" id="base_color_options">
+						</div>
+						<br>
+						<h3>Stripe Color</h3>
+						<div class="form_item color_options" id="stripe_color_options">
+						</div>
+						<br>
+						<h3>Pom Pom Color</h3>
+						<div class="form_item color_options" id="pom_pom_color_options">
+						</div>
+						<div class="checkbox"><label><input type="checkbox" id="hat-brim">Closed Brim</label></div>
+						<button id="hat-create" class="btn btn-primary" style="margin-top: calc(4vh);"><a>Create New Hat Type</a></button>
+					</div>
+				</div>
+
+				<!-- SCARF MANAGEMENT -->
+				<div class="panel panel-default collapse modal" id="scarf-create-panel">
+					<div class="panel-body">
+						<h2 class="inline_elements">Create New Scarf Type</h2><button class="back"><a>Back</a></button>
+						<h3>Colors</h3>
+						<div class="color_options" id="scarf_color_options">
+						</div>
+						<button id="scarf-create" class="btn btn-primary"><a>Create New Scarf Type</a></button>
+					</div>
+				</div>
+
+				<!-- COZY MANAGEMENT -->
+				<div class="panel panel-default collapse modal" id="cupcozy-create-panel">
+					<div class="panel-body">
+						<h2 class="inline_elements">Create New Cozy Type</h2><button class="back"><a>Back</a></button>
+						<div class="color_options" id="cupcozy_color_options">
+						</div>
+						<button id="cupcozy-create" class="btn btn-primary"><a>Create New Cozy Type</a></button>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<h2 id="h2">Dashboard</h2>
+
+				<!-- MOM MANAGEMENT -->
+				<h3 class="inline_elements">Mom Management</h3>
+				<img src="imgs/plus_sign.png" class="adjust_button open_modal" id="mom"><a> </a>
+				<div class="list-group" id="moms"></div>
+				<br>
+
+				<!-- YARN INVENTORY -->
+				<h3 class="inline_elements">Yarn</h3>
+				<img src="imgs/plus_sign.png" class="adjust_button open_modal" id="yarn"><a> </a>
+				<div class="list-group" id="yarns"></div>
+				<br>
+
+				<!-- HAT INVENTORY -->
+				<h3 class="inline_elements">Hats</h3>
+				<img src="imgs/plus_sign.png" class="adjust_button open_modal" id="hat"><a> </a>
+				<div class="list-group" id="hats"></div>
+				
+				
+				<!-- SCARF INVENTORY -->
+				<h3 class="inline_elements">Scarves</h3>
+
+				<img src="imgs/plus_sign.png" class="adjust_button open_modal" id="scarf"><a> </a>
+				<div class="list-group" id="scarves"></div>
+				<br>
+				
+				<!-- CUPCOZY INVENTORY -->
+				<h3 class="inline_elements">Cup Cozies</h3>
+				<img src="imgs/plus_sign.png" class="adjust_button open_modal" id="cupcozy"><a></a>
+				<div class="list-group" id="cupcozies"></div>
+
+				<br>
+				
+				<br><br>
+
+				<!-- LOGOUT -->
+				<button class="btn btn-lg btn-danger btn-block inline_elements" id="logout"><a>Logout</a></button>
+				<!-- SETTINGS -->
+				<button class="btn btn-lg btn-danger btn-block inline_elements" id="settings"><a href='/settings'>Settings</a></button>
+				<br>
+			</div>
+		</div>
+
+		<script src="/js/jquery.min.js"></script>
+		<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+		<script src="/js/api.js"></script>
+		<script src="/js/dashboard.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>
